@@ -1,5 +1,5 @@
 # Etapa 1: Construcción de la imagen para Laravel
-FROM php:8.2-fpm AS base
+FROM php:8.3.8-fpm AS base
 
 # Instalar extensiones necesarias
 RUN apt-get update && apt-get install -y \
