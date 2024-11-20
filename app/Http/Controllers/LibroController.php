@@ -54,24 +54,6 @@ class LibroController extends Controller
             'editMode' => $editMode,
         ]);
     }
-<<<<<<< HEAD
-
-    public function pie()
-    {
-        return view('administrator.piepagina');
-    }
-
-    public function printPDF()
-    {
-        $libros = Libro::with('autores', 'usuario')->latest()->get();
-        $headers = Headers::first();
-        $count = $libros->count();
-        $pdf = PDF::loadView('pdf.inventory_2', ['libros' => $libros, 'count' => $count, 'headers' => $headers])->setPaper('a4', 'portrait')
-            ->set_option('isPhpEnabled', true);
-        return $pdf->stream('inventory.pdf');
-    }
-=======
->>>>>>> features
 
     public function print()
     {
