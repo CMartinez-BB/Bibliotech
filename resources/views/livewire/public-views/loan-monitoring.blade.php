@@ -43,7 +43,8 @@
                     </div>
                     <div>
                         <p class="text-[15px] mt-2 leading-none">Tu libro ha sido {{ $estado }} con éxito</p>
-                        <span class="text-xs block leading-1">{{ Carbon\Carbon::now()->format('d/m/Y') }}</span>
+                        <span class="text-xs block leading-1">{{
+                            Carbon\Carbon::parse($prestamos->fecha_inicio)->format('d/m/Y') }}</span>
                     </div>
                 </div>
                 @elseif ($estado === 'pendiente de entrega')
@@ -63,7 +64,8 @@
                     </div>
                     <div>
                         <p class="text-[15px] mt-2 leading-none">{{ $estado }}</p>
-                        <span class="text-xs block leading-1">{{ Carbon\Carbon::now()->format('d/m/Y') }}</span>
+                        <span class="text-xs block leading-1">{{
+                            Carbon\Carbon::parse($prestamos->fecha_limite)->format('d/m/Y') }}</span>
                     </div>
                 </div>
                 @endif
