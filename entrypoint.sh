@@ -14,4 +14,4 @@ fi
 
 # Iniciar Laravel y el servidor de estilos en paralelo
 php artisan serve --host=0.0.0.0 --port=1010 & # Levantar Laravel en segundo plano
-npm run build # Ejecutar Vite o TailwindCSS
+npm run dev # Ejecutar Vite o TailwindCSS
