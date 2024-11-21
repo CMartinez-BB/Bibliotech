@@ -11,5 +11,9 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        strictPort: true,
+        https: true,
+    },
     base: process.env.APP_URL || '/',
 });
