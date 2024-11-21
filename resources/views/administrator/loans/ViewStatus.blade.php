@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 px-5">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @if (session()->has('message'))
             <div x-data="{show: true}" x-init="setTimeout(() => show = false, 3000)" x-show="show">
@@ -16,7 +16,7 @@
             </div>
             @endif
             <div class="overflow-hidden">
-                <div class="md:flex md:justify-center text-2xl">
+                <div class="flex justify-center">
                     <livewire:loan-monitoring>
                 </div>
             </div>
