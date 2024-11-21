@@ -1,8 +1,5 @@
 #!/bin/bash
 
-#Compilar los estilos
-npm run build
-
 # Ejecutar migraciones y capturar errores
 if ! php artisan migrate --force; then
     echo "Error: Las migraciones no se ejecutaron correctamente."
