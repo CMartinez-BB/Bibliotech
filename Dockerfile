@@ -45,6 +45,11 @@ ENTRYPOINT ["sh", "/usr/local/bin/entrypoint.sh"]
 
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
+# Copiar el script de despliegue
+COPY deploy.sh /usr/local/bin/deploy.sh
+# Configurar el script como comando predeterminado
+RUN chmod +x /usr/local/bin/deploy.sh
+
 # Configurar puerto de escucha
 EXPOSE 8080
 
