@@ -1,15 +1,11 @@
 {
   "resources/css/app.css": {
-<<<<<<< HEAD
-    "file": "assets/app-e3e5740c.css",
-=======
-    "file": "assets/app-20594498.css",
->>>>>>> deployment
+    "file": "assets/app-5d10efa8.css",
     "isEntry": true,
     "src": "resources/css/app.css"
   },
   "resources/js/app.js": {
-    "file": "assets/app-60f5163b.js",
+    "file": "assets/app-cfbb7a3c.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   }

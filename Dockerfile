@@ -46,7 +46,7 @@ ENTRYPOINT ["sh", "/usr/local/bin/entrypoint.sh"]
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
 # Configurar puerto de escucha
-EXPOSE 1010
+EXPOSE 8080
 
 # Comando de inicio
 CMD ["php-fpm"]
