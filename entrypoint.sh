@@ -12,6 +12,8 @@ if ! php artisan storage:link; then
     exit 1
 fi
 
-# Iniciar Laravel y el servidor de estilos en paralelo
-php artisan serve --host=0.0.0.0 --port=1010 & # Levantar Laravel en segundo plano
-npm run dev # Ejecutar Vite o TailwindCSS
+# Compilar los activos de frontend para producción
+npm run build
+
+# Iniciar Laravel
+php artisan serve --host=0.0.0.0 --port=1010

@@ -11,4 +11,5 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    base: process.env.APP_URL || '/',
 });
