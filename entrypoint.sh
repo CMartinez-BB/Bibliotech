@@ -13,4 +13,4 @@ if ! php artisan storage:link; then
 fi
 
 # Iniciar PHP-FPM
-php-fpm
+exec php-fpm
