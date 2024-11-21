@@ -1,4 +1,3 @@
-npm i 
 npm run build
 php artisan config:cache
 php artisan event:cache
