@@ -1,7 +1,10 @@
-<div class="bg-white p-4 rounded-lg w-1/2 h-auto">
+<div class="bg-white p-4 rounded-lg w-auto md:w-1/2 h-auto">
     <section class="py-5">
-        <h2 class="text-3xl font-bold text-center p-3">Seguimiento de préstamos</h2>
-        <p class="text-[15px] w-96 mx-auto text-gray-500 leading-none p-3">Introduzca su número de folio para verificar
+        <h2 class="text-2xl md:text-3xl font-bold text-center p-3">Seguimiento de préstamos</h2>
+        <p class="text-center md:text-start md:text-[15px] w-96 mx-auto text-gray-500 leading-none p-3">Introduzca su
+            número de folio
+            para
+            verificar
             el
             estado
             actual de
@@ -15,7 +18,7 @@
     </section>
 
     @if (!empty($prestamos))
-    <section class="bg-gray-100 shadow-md p-5 rounded-md w-[360px] mx-auto py-10 mb-10">
+    <section class="bg-gray-100 shadow-md p-5 rounded-md md:w-[360px] mx-auto py-10 mb-10">
         <div>
             <h3 class="text-2xl font-bold">Estado del préstamo</h3>
             <p class="text-sm text-gray-600 capitalize"> <span>{{ $prestamos->alumnos()->first()->nombre }}</span>
