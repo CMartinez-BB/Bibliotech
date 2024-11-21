@@ -1,4 +1,4 @@
-# Etapa 1: Construcción de la imagen para Laravel
+# Etapa base: Configuración del entorno PHP y Laravel
 FROM php:8.3.8-fpm AS base
 
 # Instalar extensiones necesarias
@@ -27,23 +27,21 @@ WORKDIR /var/www/html
 # Copiar archivos de la aplicación
 COPY . .
 
-# Instalar dependencias de Laravel
-RUN composer install --no-dev --optimize-autoloader
-
-# Instalar dependencias de npm y compilar activos
-RUN npm install
-RUN npm run build
-
-# Configurar permisos
-RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
-
 # Copiar el script de entrada
 COPY entrypoint.sh /usr/local/bin/entrypoint.sh
 
 # Configurar el script como comando predeterminado
+RUN chmod +x /usr/local/bin/entrypoint.sh
 ENTRYPOINT ["sh", "/usr/local/bin/entrypoint.sh"]
 
-RUN chmod +x /usr/local/bin/entrypoint.sh
+# Instalar dependencias de Laravel
+RUN composer install --no-dev --optimize-autoloader
+
+# Instalar dependencias de desarrollo de Node.js
+RUN npm install && npm run build
+
+# Configurar permisos
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 # Configurar puerto de escucha
 EXPOSE 8080
