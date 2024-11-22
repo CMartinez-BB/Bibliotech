@@ -13,11 +13,7 @@
                     manera fácil y sencilla.'}}</h2>
 
                 <div class="md:flex md:justify-center p-5 text-2xl">
-                    @if($editMode)
-                    <livewire:crear-libro :libro="$libro" />
-                    @else
                     <livewire:crear-libro />
-                    @endif
                 </div>
             </div>
         </div>

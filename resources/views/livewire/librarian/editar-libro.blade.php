@@ -1,4 +1,4 @@
-<form class="md:w-1/2" wire:submit.prevent='crearLibro'>
+<form class="md:w-1/2" wire:submit.prevent='editarLibro'>
     <div>
         <x-input-label for="titulo" :value="__('Titulo del libro')" class="uppercase" />
         <x-text-input id="titulo" class="block mt-1 w-full" type="text" wire:model="titulo" :value="old('titulo')"
@@ -89,25 +89,25 @@
         <textarea wire:model="descripcion" class="rounded-md mt-1 w-full h-72 border-gray-300"></textarea>
         <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
     </div>
-
     <div class="mt-5">
-        <div class="mt-5">
-            <x-input-label for="imagen" :value="__('portada')" class="uppercase" />
-            <x-text-input id="imagen" class="block text-sm mt-1 w-full" type="file" wire:model="imagen"
-                accept="image/*" />
+        <x-input-label for="imagen" :value="__('portada')" class="uppercase" />
+        <x-text-input id="imagen" class="block text-sm mt-1 w-full" type="file" wire:model="imagen_nueva"
+            accept="image/*" />
 
-            {{-- Preview image --}}
-            <div class="my-5 w-80">
-                @if ($imagen)
-                Imagen: <img src="{{ $imagen->temporaryUrl() }}">
-                @endif
-            </div>
-
-            <x-input-error :messages="$errors->get('imagen')" class="mt-2" />
+        <div class="mt-5 text-xs">
+            <x-input-label for="imagen" :value="__('portada actual')" class="uppercase" />
+            <img src="{{ asset('storage/libros/' . $imagen) }}" alt="{{ 'Imagen del libro ' . $titulo }}">
         </div>
+        <div class="my-5 w-80">
+            @if ($imagen_nueva)
+            Imagen nueva: <img src="{{ $imagen_nueva->temporaryUrl() }}">
+            @endif
+        </div>
+        <x-input-error :messages="$errors->get('imagen_nueva')" class="mt-2" />
     </div>
 
     <x-primary-button class="mt-5">
-        Agregar libro
+        Actualizar libro
     </x-primary-button>
+
 </form>
