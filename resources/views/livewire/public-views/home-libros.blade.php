@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <link rel="stylesheet" href="{{ asset('css/swipper.css') }}">
-</head>
-
-<body>
+<div>
     {{-- Our collection --}}
     <div class="mt-20 overflow-hidden lg:py-5 bg-white">
         <h3 class="uppercase text-4xl font-bold px-5 w-full md:px-40 text-indigo-700">conoce nuestra colleción</h3>
@@ -45,100 +38,7 @@
     {{-- preview Books--}}
     <div class="py-10 bg-gray-100" id="categorias">
         <h3 class="text-3xl uppercase font-bold text-center">Selecciona tu categoría</h3>
-        <div class="flex flex-wrap justify-center mt-14 swiper mySwiper py-10">
-            {{-- Inventory --}}
-            <div class="swiper-wrapper">
-                @foreach ($categorias as $categoria)
-                <div class="flex flex-col items-center swiper-slide">
-                    @switch($categoria->id)
-                    @case(1)
-                    <div class="w-12 h-12">
-                        <img src="{{ asset('imgs/icons/LOGO-ISC.png') }}" alt="Icon sistemas">
-                    </div>
-                    @break
-                    @case(2)
-                    <div class="w-12 h-12">
-                        <img src="{{ asset('imgs/icons/Logo-contador.png') }}" alt="Icon contabilidad">
-                    </div>
-                    @break
-                    @case(3)
-                    <div class="w-12 h-12">
-                        <img src="{{ asset('imgs/icons/logo-IMCT (1).png') }}" alt="Icon mecatronica">
-                    </div>
-                    @break
-                    @case(4)
-                    <div class="w-12 h-12">
-                        <img src="{{ asset('imgs/icons/Logo-electromecanica.jpg') }}" alt="Icon electronmecanica">
-                    </div>
-                    @break
-                    @case(5)
-                    <div class="w-12 h-12">
-                        <img src="{{ asset('imgs/icons/LOGO-IGEM.png') }}" alt="Icon gestion empresarial">
-                    </div>
-                    @break
-                    @case(6)
-                    <div class="w-12 h-12">
-                        <img src="{{ asset('imgs/icons/Logo-industrial.jpg') }}" alt="Icon industrial">
-                    </div>
-                    @break
-                    @case(7)
-                    <div class="w-12 h-12">
-                        <img src="{{ asset('imgs/icons/Logo-IEL.jpg') }}" alt="Icon automotriz">
-                    </div>
-                    @break
-                    @case(8)
-                    <div class="w-12 h-12">
-                        <img src="{{ asset('imgs/icons/revista.png') }}" alt="Icon revista">
-                    </div>
-                    @break
-                    @case(9)
-                    <div class="w-12 h-12">
-                        <img src="{{ asset('imgs/icons/cd-video.png') }}" alt="Icon automotriz">
-                    </div>
-                    @break
-                    @default
-
-                    @endswitch
-                    <a href="{{ route('dashboard') }}" class="mb-1 text-xl font-medium text-gray-900 text-center">{{
-                        $categoria->categoria }}</a>
-                </div>
-                @endforeach
-            </div>
-        </div>
+        {{-- Inventory --}}
+        <livewire:books-category />
     </div>
-
-    <!-- Swiper JS -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-
-    <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            centeredSlides: true,
-            loop: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                640: {
-                slidesPerView: 1,
-                centeredSlides: false,
-                },
-                768: {
-                slidesPerView: 3,
-                centeredSlides: false,
-                },
-                1024: {
-                slidesPerView: 4,
-                centeredSlides: true,
-                }
-            }
-        });
-    </script>
-</body>
-
-</html>
+</div>

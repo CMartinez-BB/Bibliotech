@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Categoria;
 use App\Models\Libro;
+use PhpOffice\PhpSpreadsheet\Calculation\Category;
 
 class PublicController extends Controller
 {
@@ -13,6 +15,13 @@ class PublicController extends Controller
     public function index()
     {
         return view('home.index');
+    }
+
+    public function view(Categoria $category)
+    {
+        return view('home.category', [
+            'category' => $category
+        ]);
     }
 
     /**
