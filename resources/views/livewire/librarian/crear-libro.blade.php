@@ -1,6 +1,6 @@
 <form class="md:w-1/2" wire:submit.prevent='crearLibro'>
     <div>
-        <x-input-label for="titulo" :value="__('Titulo del libro')" class="uppercase" />
+        <x-input-label for="titulo" :value="__('Título del libro')" class="uppercase" />
         <x-text-input id="titulo" class="block mt-1 w-full" type="text" wire:model="titulo" :value="old('titulo')"
             placeholder="Ej: calculo diferencial" />
         <x-input-error :messages="$errors->get('titulo')" class="mt-2" />
@@ -58,7 +58,7 @@
                 <option value="{{ $estante->id }}">{{ $estante->estante }}</option>
                 @endforeach
             </select>
-            <x-input-error :messages="$errors->get('categoria')" class="mt-2" />
+            <x-input-error :messages="$errors->get('categoría')" class="mt-2" />
         </div>
     </div>
 
@@ -85,7 +85,7 @@
     </div>
 
     <div class="mt-5">
-        <x-input-label for="descripcion" :value="__('descripcion')" class="uppercase" />
+        <x-input-label for="descripcion" :value="__('descripción')" class="uppercase" />
         <textarea wire:model="descripcion" class="rounded-md mt-1 w-full h-72 border-gray-300"></textarea>
         <x-input-error :messages="$errors->get('descripcion')" class="mt-2" />
     </div>
