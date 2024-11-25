@@ -98,7 +98,7 @@ class CrearLibro extends Component
 
         UserActivity::create([
             'user_id' => auth()->user()->id,
-            'activity' => 'Creación de un nuvo lirbo',
+            'activity' => 'Creación de un nuevo libro',
             'description' => 'Se ha creado el libro ' . $libro->titulo . ' por ' . auth()->user()->name . ' ' . auth()->user()->apellido_patero . ' ' . auth()->user()->apellido_matero,
         ]);
         // Crear mensaje de éxito
