@@ -8,6 +8,13 @@ use Livewire\Component;
 
 class ShowUsersTable extends Component
 {
+    protected $listeners = ['deleteUser'];
+
+    public function deleteUser(User $user)
+    {
+        $user->delete();
+    }
+
     public function render()
     {
         // Get the users except the admin
