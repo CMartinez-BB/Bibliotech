@@ -19,9 +19,9 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://bibliotech-production-8356.up.railway.app/*'],
+    'allowed_origins' => ['https://bibliotech-production-8356.up.railway.app/'],
 
-    'allowed_origins_patterns' => ['*'],
+    'allowed_origins_patterns' => ['https://bibliotech-production-8356.up.railway.app/'],
 
     'allowed_headers' => ['*'],
 
