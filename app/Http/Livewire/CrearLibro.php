@@ -29,36 +29,20 @@ class CrearLibro extends Component
 
     use WithFileUploads;
 
-    // protected $rules = [
-    //     'titulo' => 'required|string',
-    //     'autores' => 'required|string',
-    //     'edicion' => 'required|string',
-    //     'tomo' => 'nullable|string',
-    //     'paginas' => 'nullable|string',
-    //     'categoria' => 'required|integer',
-    //     'estante' => 'nullable|integer',
-    //     'fecha' => 'required|date',
-    //     'cantidad' => 'required|integer',
-    //     'isbn' => 'required|string|regex:/^[a-zA-Z0-9-]+$/|unique:libros,isbn',
-    //     'descripcion' => 'required|string',
-    //     'imagen' => 'required|image|mimes:jpg,jpeg,png,gif,webp|max:1024'
-    // ];
-
     protected $rules = [
         'titulo' => 'required|string',
-        'autores' => 'required|string|regex:/^[a-zA-Z\s,]+$/',  // Permite solo letras y comas
+        'autores' => 'required|string',
         'edicion' => 'required|string',
         'tomo' => 'nullable|string',
-        'paginas' => 'nullable|regex:/^\d+$/',  // Solo números para páginas
-        'categoria' => 'required|integer|regex:/^\d+$/',  // Solo números para categoría
-        'estante' => 'nullable|integer|regex:/^\d+$/',  // Solo números para estante
+        'paginas' => 'nullable|string',
+        'categoria' => 'required|integer',
+        'estante' => 'nullable|integer',
         'fecha' => 'required|date',
-        'cantidad' => 'required|integer|regex:/^\d+$/',  // Solo números para cantidad
-        'isbn' => 'required|string|regex:/^\d{13}$/|unique:libros,isbn',  // ISBN de 13 dígitos
-        'descripcion' => 'required|string|regex:/^[a-zA-Z0-9\s,\.!?\-]+$/',  // Permitido letras, números y algunos signos
+        'cantidad' => 'required|integer',
+        'isbn' => 'required|string|regex:/^[a-zA-Z0-9-]+$/|unique:libros,isbn',
+        'descripcion' => 'required|string',
         'imagen' => 'required|image|mimes:jpg,jpeg,png,gif,webp|max:1024'
     ];
-
 
 
     public function crearLibro()
