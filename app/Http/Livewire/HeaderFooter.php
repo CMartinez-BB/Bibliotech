@@ -28,15 +28,6 @@ class HeaderFooter extends Component
             $base64Footer = 'data:/image/' . $type . ';base64,' . base64_encode($data);
 
         }
-        // Header
-        // $header = Headers::all();
-        // $encabezado = public_path('storage/logos/' . $header[0]->header);
-        // dd($encabezado);
-
-        // Footer
-        // $footer = Headers::all();
-        // $pie = public_path('storage/logos/' . $footer[0]->footer);
-        // dd($pie);
 
         return view('livewire.header-footer', [
             'base64Header' => $base64Header,

@@ -13,8 +13,9 @@
 </head>
 
 <body>
-    {{-- Header and Footer --}}
-    <livewire:header-footer />
+    @if ($base64Header)
+    <img src="{{ $base64Header }}" alt="Encabezado" style="width: 100%;">
+    @endif
 
     <main>
         <div class="header">
@@ -156,7 +157,9 @@
             </table>
         </div>
     </main>
-    {{-- Information font-sans antialiased --}}
+    @if ($base64Footer)
+    <img src="{{ $base64Footer }}" alt="Pie de página" style="width: 100%;">
+    @endif
 </body>
 
 </html>
