@@ -9,7 +9,8 @@
                             d="M36.5,-49.6C47.4,-42.3,56.4,-31.7,65.4,-18C74.4,-4.2,83.4,12.9,80,26.8C76.6,40.7,60.9,51.5,45.5,62.4C30.1,73.4,15.1,84.6,-0.2,85C-15.6,85.3,-31.1,74.8,-37.8,61C-44.5,47.2,-42.3,30.1,-46.2,15.6C-50.1,1.1,-60,-10.8,-57,-18.1C-54,-25.3,-38.1,-27.9,-26.5,-35C-14.8,-42.1,-7.4,-53.7,2.7,-57.4C12.8,-61.1,25.6,-56.9,36.5,-49.6Z"
                             transform="translate(100 100)" />
                     </svg>
-                    <img src="{{ asset('imgs/people.png') }}" alt="Imge people funny" class="relative z-20" />
+                    <img src="{{ asset('imgs/muchacha-sonriendo-isc.webp') }}"
+                        alt="Imagend ejemplo de una muchacha sonriendo" class="relative z-20" />
                 </div>
             </div>
 
