@@ -81,7 +81,7 @@
         <div class="block-trhee w-full flex flex-col gap-5">
             {{-- Tipo de prestamo --}}
             <div class="relative z-0 w-full">
-                <select id="tipo_prestamo" wire:change="type_isbn($event.target.value)"
+                <select id="tipo_prestamo" wire:change="type_loan($event.target.value)"
                     class="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0 rounded-none"
                     placeholder=" ">
                     <option value=" ">Tipo préstamo</option>

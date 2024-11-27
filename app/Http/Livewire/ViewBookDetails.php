@@ -1,4 +1,5 @@
 <?php
+
 namespace App\Http\Livewire;
 
 use App\Models\Libro;
@@ -93,9 +94,9 @@ class ViewBookDetails extends Component
     // Set the datas for the view with the type of loan
     public function type_loan($type_loan_id)
     {
-        $this->tipo_prestamo = $type_loan_id;
+        $this->type_loan_id = $type_loan_id;
         $this->emit('dataLoan', [
-            'type_loan' => $this->tipo_prestamo,
+            'type_loan' => $this->type_loan_id,
         ]);
     }
 
