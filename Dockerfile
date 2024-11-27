@@ -42,6 +42,8 @@ RUN npm install && npm run build
 
 # Configurar permisos
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
+RUN chmod -R 775 /var/www/html/storage
+RUN chmod -R 775 /var/www/html/bootstrap/cache
 
 # Configurar puerto de escucha
 EXPOSE 8080
