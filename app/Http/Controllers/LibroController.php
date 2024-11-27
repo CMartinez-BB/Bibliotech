@@ -19,7 +19,6 @@ class LibroController extends Controller
         } elseif ($user->rol == 2) {
             return redirect()->route('admin.index');
         }
-
     }
 
     /**
@@ -28,8 +27,7 @@ class LibroController extends Controller
     public function create()
     {
         //
-        $editMode = false;
-        return view('administrator.create', ['editMode' => $editMode]);
+        return view('administrator.create');
     }
 
     /**
@@ -48,10 +46,8 @@ class LibroController extends Controller
     public function edit(Libro $libro)
     {
         //
-        $editMode = true;
-        return view('administrator.create', [
-            'libro' => $libro,
-            'editMode' => $editMode,
+        return view('administrator.edit', [
+            'libro' => $libro
         ]);
     }
 

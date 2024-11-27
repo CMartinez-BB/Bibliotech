@@ -88,10 +88,6 @@
                             @break
                             @default
                             @endswitch
-                            {{-- <span
-                                class="inline-flex items-center gap-1 rounded-full bg-sea-100 px-2 py-1 text-xs capitalize font-semibold text-blue-600">
-                                {{ $libro->categoria->categoria}}
-                            </span> --}}
                         </div>
                     </td>
                     {{-- Herramientas --}}
