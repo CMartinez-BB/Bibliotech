@@ -39,7 +39,7 @@ class CrearLibro extends Component
         'estante' => 'nullable|integer',
         'fecha' => 'required|date',
         'cantidad' => 'required|integer',
-        'isbn' => 'required|string|unique:libros,isbn',
+        'isbn' => 'required|string|regex:/^[a-zA-Z0-9-]+$/|unique:libros,isbn',
         'descripcion' => 'required|string',
         'imagen' => 'required|image|mimes:jpg,jpeg,png,gif,webp|max:1024'
     ];

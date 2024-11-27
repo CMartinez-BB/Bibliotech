@@ -58,7 +58,7 @@
                 <option value="{{ $estante->id }}">{{ $estante->estante }}</option>
                 @endforeach
             </select>
-            <x-input-error :messages="$errors->get('categoría')" class="mt-2" />
+            <x-input-error :messages="$errors->get('estante')" class="mt-2" />
         </div>
     </div>
 
