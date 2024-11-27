@@ -41,7 +41,7 @@ class CrearLibro extends Component
         'cantidad' => 'required|integer',
         'isbn' => 'required|string|unique:libros,isbn',
         'descripcion' => 'required|string',
-        'imagen' => 'required|image|max:1024',
+        'imagen' => 'required|image|mimes:jpg,jpeg,png,gif,webp|max:1024'
     ];
 
 
