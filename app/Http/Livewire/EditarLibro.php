@@ -74,7 +74,6 @@ class EditarLibro extends Component
     public function editarLibro()
     {
         $datos = $this->validate();
-
         $datos = array_map('strtolower', $datos);
         //check if a new image exists
         if ($this->imagen_nueva) {
@@ -108,7 +107,7 @@ class EditarLibro extends Component
         $libro->save();
         UserActivity::create([
             'user_id' => auth()->user()->id,
-            'activity' => 'Actualización de un nuvo lirbo',
+            'activity' => 'Actualización de un nuevo lirbo',
             'description' => 'Se ha creado el libro ' . $libro->titulo . ' por ' . auth()->user()->name . ' ' . auth()->user()->apellido_patero . ' ' . auth()->user()->apellido_matero,
         ]);
         // Redirect
