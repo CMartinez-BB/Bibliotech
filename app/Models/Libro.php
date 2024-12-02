@@ -53,4 +53,8 @@ class Libro extends Model
     {
         return $this->belongsToMany(Libro::class, 'alumnno_id', 'libro_id', 'prestamo_id');
     }
+    public function prestamos()
+    {
+        return $this->belongsToMany(Prestamo::class, 'libro_prestamo');
+    }
 }

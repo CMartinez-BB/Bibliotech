@@ -19,6 +19,7 @@ class LibroPrestamo extends Model
     {
         return $this->belongsTo(Libro::class, 'libro_id');
     }
+
     public function prestamo()
     {
         return $this->belongsTo(Prestamo::class, 'prestamo_id');
@@ -28,4 +29,6 @@ class LibroPrestamo extends Model
     {
         return $this->belongsTo(Alumno::class, 'alumno_id');
     }
+
+
 }

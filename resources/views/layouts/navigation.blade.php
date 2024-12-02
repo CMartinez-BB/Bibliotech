@@ -94,6 +94,36 @@
                         </x-dropdown>
                     </div>
 
+                    {{-- Enlaces Melissa Gameros y Maricruz Sánchez --}}
+                    <div class="hidden sm:flex sm:items-center sm:ml-6">
+                        <x-dropdown align="right" width="48">
+                            <x-slot name="trigger">
+                                <button
+                                    class="inline-flex items-center px-1 pt-1 border border-transparent text-sm leading-4 font-medium rounded-md text-white focus:outline-none transition ease-in-out duration-150">
+                                    <div>Otros</div>
+
+                                    <div class="ml-1">
+                                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd"
+                                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                </button>
+                            </x-slot>
+
+                            <x-slot name="content">
+                                <x-dropdown-link :href="route('loans.quarterly')"
+                                    :active="request()->routeIs('loans.quarterly')">
+                                    {{ __('Admon. Entradas') }}
+                                </x-dropdown-link>
+                            </x-slot>
+                        </x-dropdown>
+                    </div>
+
+
+
                     @endif
 
                     @if (Auth::user()->rol === 2)
@@ -230,6 +260,7 @@
                 </div>
             </div>
 
+
             <div x-data="{ open: false }" class="sm:hidden">
                 <button @click="open = !open" class="flex w-full items-center pl-3 pr-4 py-2 border-l-4 border-transparent text-left text-base font-medium text-gray-600
                     dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 
@@ -253,6 +284,31 @@
                     </x-responsive-nav-link>
                     <x-responsive-nav-link :href="route('loans.create')" :active="request()->routeIs('loans.show')">
                         {{ __('Más información') }}
+                    </x-responsive-nav-link>
+                </div>
+            </div>
+
+            {{--Enlaces Meli y Mari--}}
+
+            <div x-data="{ open: false }" class="sm:hidden">
+                <button @click="open = !open" class="flex w-full items-center pl-3 pr-4 py-2 border-l-4 border-transparent text-left text-base font-medium text-gray-600
+                dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-50 
+                hover:border-gray-300 focus:outline-none focus:text-gray-800 dark:focus:text-gray-200
+                focus:bg-gray-50  focus:border-gray-300  transition ease-in-out duration-150">
+                    <div>Otros</div>
+                    <div class="ml-1 flex items-center">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </div>
+                </button>
+                <div x-show="open" @click.away="open = false">
+                    {{-- boton de acceder a Admon. Entradas --}}
+                    <x-responsive-nav-link :href="route('loans.quarterly')"
+                        :active="request()->routeIs('loans.quarterly')">
+                        {{ __('Admon. Entradas') }}
                     </x-responsive-nav-link>
                 </div>
             </div>
