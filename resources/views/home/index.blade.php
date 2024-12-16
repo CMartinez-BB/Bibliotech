@@ -40,19 +40,19 @@
     <div class="bg-white overflow-hidden md:py-24">
         <h3 class="px-5 md:px-0 text-center font-bold text-3xl md:text-5xl">Nos preocupamos por una mejor navegación
         </h3>
-        <p class="px-5 md:px-0 text-lg text-center font-semibold capitalize text-indigo-700 mt-2">Por eso hemos
+        <p class="px-5 md:px-0 text-lg text-center font-semibold text-indigo-700 mt-2">Por eso hemos
             incluido</p>
         <div
             class="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl grid grid-row-3 lg:grid-cols-3 md:gap-10 mt-16 items-center mb-16">
-            <div class="col-span-1 py-5 md:py-0 text-center md:text-start">
+            <div class="col-span-1 py-5 md:py-0 text-center md:text-justify">
                 <i class="fa-solid fa-mobile mr-3 text-indigo-700 text-4xl items-center"></i>
                 <p class="text-lg font-bold capitalize">
                     Multiplataforma
                 </p>
                 <span class="text-gray-400">Con nuestra plataforma, puedes acceder a la biblioteca desde tu celular y
-                    disfrutar de una experiencia de usuario óptima en cualquier dispositivo</span>
+                    disfrutar de una experiencia de usuario óptima en cualquier dispositivo.</span>
             </div>
-            <div class="col-span-1 py-5 md:py-0 text-center md:text-start">
+            <div class="col-span-1 py-5 md:py-0 text-center md:text-justify">
                 <i class="fa-brands fa-windows mr-3 text-indigo-700 text-4xl"></i>
                 <p class="text-xl font-bold capitalize">
                     Mejor interfaz de usuario
@@ -60,7 +60,7 @@
                 <span class="text-gray-400 ">Hemos mejorado la interfaz de usuario de nuestro gestor de biblioteca para
                     proporcionar una experiencia de usuario más intuitiva y fácil de usar.</span>
             </div>
-            <div class="col-span-1 py-5 md:py-0 text-center md:text-start">
+            <div class="col-span-1 py-5 md:py-0 text-center md:text-justify">
                 <i class="fa-solid fa-brain mr-1 text-indigo-700 text-4xl"></i>
                 <p class="text-xl font-bold capitalize">
                     Préstamos Inteligentes

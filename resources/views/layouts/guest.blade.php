@@ -26,7 +26,7 @@
             </div>
             <div class="absolute bottom-0 left-0 right-0 p-10 z-20 text-white flex flex-col items-start justify-end">
                 <h2 class="text-3xl uppercase font-extrabold">Instituto Tecnológico Superior</h2>
-                <a href="https://unsplash.com/es/fotos/BpbkLACP64M" target="_blank">Nuevo Casas
+                <a href="http://www.itsncg.edu.mx/" target="_blank">De Nuevo Casas
                     Grandes</a>
             </div>
         </div>
