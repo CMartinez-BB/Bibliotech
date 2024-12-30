@@ -104,6 +104,6 @@ Este software es propiedad del Instituto Tecnológico Superior de Nuevo Casas Gr
 
 Para cualquier consulta relacionada con esta licencia, por favor comuníquese con el Instituto Tecnológico Superior de Nuevo Casas Grandes Chihuahua (ITSNCG) en [mtz.carlos.123.nz@gmail.com].
 
-Fecha de Vigencia: 20-ago-2022 - 19-junio-2024
+Fecha de Vigencia: 20-ago-2022 - 20-junio-2027
 
 © 202 Instituto Tecnológico Superior de Nuevo Casas Grandes (ITSNCG).
