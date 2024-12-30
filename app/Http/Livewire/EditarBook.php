@@ -11,7 +11,7 @@ use App\Models\UserActivity;
 use Livewire\WithFileUploads;
 use Illuminate\Support\Carbon;
 
-class EditarLibro extends Component
+class EditarBook extends Component
 {
     public $libro_id;
     public $titulo;
@@ -27,6 +27,7 @@ class EditarLibro extends Component
     public $descripcion;
     public $imagen;
     public $imagen_nueva;
+
 
     use WithFileUploads;
 
@@ -70,7 +71,6 @@ class EditarLibro extends Component
     }
 
 
-    // Edit and create libro
     public function editarLibro()
     {
         $datos = $this->validate();
@@ -119,7 +119,7 @@ class EditarLibro extends Component
     {
         $categorias = Categoria::all();
         $estantes = Estante::all();
-        return view('livewire.librarian.editar-libro', [
+        return view('livewire.librarian.editar-book',  [
             'categorias' => $categorias,
             'estantes' => $estantes
         ]);
